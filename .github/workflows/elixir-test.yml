@@ -11,6 +11,8 @@ permissions:
 
 jobs:
   build:
+    env:
+      ImageOS: ubuntu20
 
     name: Build and test
     runs-on: ubuntu-latest
