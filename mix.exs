@@ -6,7 +6,7 @@ defmodule Elixteg.Mixfile do
 
   def project do
     [
-      app: :nadia,
+      app: :elixteg,
       version: @version,
       elixir: "~> 1.8",
       package: package(),
