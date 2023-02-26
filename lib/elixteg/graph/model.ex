@@ -1,4 +1,4 @@
-defmodule Nadia.Graph.Model do
+defmodule Elixteg.Graph.Model do
   @moduledoc """
   Types used in Telegra.ph API.
 

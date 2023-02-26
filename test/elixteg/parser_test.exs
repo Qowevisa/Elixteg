@@ -1,9 +1,9 @@
-defmodule Nadia.ParserTest do
+defmodule Elixteg.ParserTest do
   use ExUnit.Case, async: true
 
-  alias Nadia.Parser
+  alias Elixteg.Parser
 
-  alias Nadia.Model.{
+  alias Elixteg.Model.{
     Update,
     InlineQuery,
     CallbackQuery,
@@ -18,11 +18,11 @@ defmodule Nadia.ParserTest do
   test "parse result of get_me" do
     me =
       Parser.parse_result(
-        %{id: 666, first_name: "Nadia", last_name: nil, username: "nadia_bot"},
+        %{id: 666, first_name: "Elixteg", last_name: nil, username: "elixteg_bot"},
         "getMe"
       )
 
-    assert me == %User{id: 666, first_name: "Nadia", last_name: nil, username: "nadia_bot"}
+    assert me == %User{id: 666, first_name: "Elixteg", last_name: nil, username: "elixteg_bot"}
   end
 
   test "parse result of get_user_profile_photos" do
@@ -98,9 +98,9 @@ defmodule Nadia.ParserTest do
     updates = Parser.parse_result(raw_updates, "getUpdates")
 
     assert updates == [
-             %Nadia.Model.Update{
-               channel_post: %Nadia.Model.Message{
-                 chat: %Nadia.Model.Chat{
+             %Elixteg.Model.Update{
+               channel_post: %Elixteg.Model.Message{
+                 chat: %Elixteg.Model.Chat{
                    id: -1_000_000_000_000,
                    title: "Test Channel",
                    type: "channel"
@@ -115,17 +115,17 @@ defmodule Nadia.ParserTest do
                },
                update_id: 790_000_000
              },
-             %Nadia.Model.Update{
-               message: %Nadia.Model.Message{
-                 chat: %Nadia.Model.Chat{
+             %Elixteg.Model.Update{
+               message: %Elixteg.Model.Message{
+                 chat: %Elixteg.Model.Chat{
                    first_name: "John",
                    id: 440_000_000,
                    last_name: "Doe",
                    type: "private",
-                   photo: %Nadia.Model.ChatPhoto{small_file_id: "sid", big_file_id: "bid"}
+                   photo: %Elixteg.Model.ChatPhoto{small_file_id: "sid", big_file_id: "bid"}
                  },
                  date: 1_508_359_228,
-                 from: %Nadia.Model.User{first_name: "John", id: 440_000_000, last_name: "Doe"},
+                 from: %Elixteg.Model.User{first_name: "John", id: 440_000_000, last_name: "Doe"},
                  message_id: 3,
                  text: "Test"
                },
@@ -163,13 +163,13 @@ defmodule Nadia.ParserTest do
              %Update{
                inline_query: %InlineQuery{
                  id: 111,
-                 from: %Nadia.Model.User{
+                 from: %Elixteg.Model.User{
                    id: 222,
                    first_name: "Roman",
                    last_name: "Senin",
                    username: "Rastopyr"
                  },
-                 location: %Nadia.Model.Location{
+                 location: %Elixteg.Model.Location{
                    latitude: 123,
                    longitude: 321
                  },
@@ -262,12 +262,12 @@ defmodule Nadia.ParserTest do
     updates = Parser.parse_result(raw_updates, "getUpdates")
 
     assert updates == [
-             %Nadia.Model.Update{
-               edited_message: %Nadia.Model.Message{
-                 chat: %Nadia.Model.Chat{first_name: "John", id: 440_000_000, type: "private"},
+             %Elixteg.Model.Update{
+               edited_message: %Elixteg.Model.Message{
+                 chat: %Elixteg.Model.Chat{first_name: "John", id: 440_000_000, type: "private"},
                  date: 1_508_359_228,
                  edit_date: 1_508_360_678,
-                 from: %Nadia.Model.User{first_name: "John", id: 440_000_000},
+                 from: %Elixteg.Model.User{first_name: "John", id: 440_000_000},
                  message_id: 3,
                  text: "Edited message"
                },

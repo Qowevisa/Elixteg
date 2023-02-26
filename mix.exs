@@ -1,7 +1,7 @@
-defmodule Nadia.Mixfile do
+defmodule Elixteg.Mixfile do
   use Mix.Project
 
-  @source_url "https://github.com/zhyu/nadia"
+  @source_url "https://github.com/qowevisa/elixteg"
   @version "0.7.0"
 
   def project do

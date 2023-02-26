@@ -1,4 +1,6 @@
-# Nadia
+# Elixteg
+
+Originated from [Nadia](https://github.com/zhyu/nadia) mix package
 
 [![Elixir CI](https://github.com/zhyu/nadia/actions/workflows/elixir.yml/badge.svg)](https://github.com/zhyu/nadia/actions/workflows/elixir.yml)
 [![Module Version](https://img.shields.io/hexpm/v/nadia.svg)](https://hex.pm/packages/nadia)
@@ -11,12 +13,12 @@ Telegram Bot API Wrapper written in Elixir ([document](https://hexdocs.pm/nadia/
 
 ## Installation
 
-Add `:nadia` to your `mix.exs` dependencies:
+Add `:elixteg` to your `mix.exs` dependencies:
 
 ```elixir
 def deps do
   [
-    {:nadia, "~> 0.7.0"}
+    {:elixteg, "~> 0.7.0"}
   ]
 end
 ```
@@ -28,21 +30,21 @@ And run `$ mix deps.get`.
 In `config/config.exs`, add your Telegram Bot token like [this](config/config.exs.example)
 
 ```elixir
-config :nadia,
+config :elixteg,
   token: "bot token"
 ```
 
 You can also add an optional `recv_timeout` in seconds (defaults to 5s):
 
 ```elixir
-config :nadia,
+config :elixteg,
   recv_timeout: 10
 ```
 
 You can also add a proxy support:
 
 ```elixir
-config :nadia,
+config :elixteg,
   proxy: "http://proxy_host:proxy_port", # or {:socks5, 'proxy_host', proxy_port}
   proxy_auth: {"user", "password"},
   ssl: [versions: [:'tlsv1.2']]
@@ -52,7 +54,7 @@ You can also configure the the base url for the api if you need to for some
 reason:
 
 ```elixir
-config :nadia,
+config :elixteg,
   # Telegram API. Default: https://api.telegram.org/bot
   base_url: "http://my-own-endpoint.com/whatever/",
 
@@ -63,7 +65,7 @@ config :nadia,
 Environment variables may be used as well:
 
 ```elixir
-config :nadia,
+config :elixteg,
   token: {:system, "ENVVAR_WITH_MYAPP_TOKEN", "default_value_if_needed"}
 ```
 
@@ -72,30 +74,30 @@ config :nadia,
 ### `get_me`
 
 ```elixir
-iex> Nadia.get_me
+iex> Elixteg.get_me
 {:ok,
- %Nadia.Model.User{first_name: "Nadia", id: 666, last_name: nil,
-  username: "nadia_bot"}}
+ %Elixteg.Model.User{first_name: "Elixteg", id: 666, last_name: nil,
+  username: "Elixteg_bot"}}
 ```
 
 ### `get_updates`
 
 ```elixir
-iex> Nadia.get_updates limit: 5
+iex> Elixteg.get_updates limit: 5
 {:ok, []}
 
 iex> {:ok,
- [%Nadia.Model.Update{callback_query: nil, chosen_inline_result: nil,
+ [%Elixteg.Model.Update{callback_query: nil, chosen_inline_result: nil,
    edited_message: nil, inline_query: nil,
-   message: %Nadia.Model.Message{audio: nil, caption: nil,
+   message: %Elixteg.Model.Message{audio: nil, caption: nil,
     channel_chat_created: nil,
-    chat: %Nadia.Model.Chat{first_name: "Nadia", id: 123,
-     last_name: "TheBot", title: nil, type: "private", username: "nadia_the_bot"},
+    chat: %Elixteg.Model.Chat{first_name: "Elixteg", id: 123,
+     last_name: "TheBot", title: nil, type: "private", username: "Elixteg_the_bot"},
     contact: nil, date: 1471208260, delete_chat_photo: nil, document: nil,
     edit_date: nil, entities: nil, forward_date: nil, forward_from: nil,
     forward_from_chat: nil,
-    from: %Nadia.Model.User{first_name: "Nadia", id: 123,
-     last_name: "TheBot", username: "nadia_the_bot"}, group_chat_created: nil,
+    from: %Elixteg.Model.User{first_name: "Elixteg", id: 123,
+     last_name: "TheBot", username: "Elixteg_the_bot"}, group_chat_created: nil,
     left_chat_member: nil, location: nil, message_id: 543,
     migrate_from_chat_id: nil, migrate_to_chat_id: nil, new_chat_member: nil,
     new_chat_photo: [], new_chat_title: nil, photo: [], pinned_message: nil,
@@ -106,20 +108,24 @@ iex> {:ok,
 ### `send_message`
 
 ```elixir
-iex> case Nadia.send_message(tlg_id, "The message text goes here") do
+iex> case Elixteg.send_message(tlg_id, "The message text goes here") do
   {:ok, _result} ->
     :ok
-  {:error, %Nadia.Model.Error{reason: "Please wait a little"}} ->
+  {:error, %Elixteg.Model.Error{reason: "Please wait a little"}} ->
     :wait
   end
 
 :ok
 ```
 
-Refer to [Nadia document](https://hexdocs.pm/nadia/) and [Telegram Bot API document](https://core.telegram.org/bots/api) for more details.
+Refer to [Elixteg document](https://hexdocs.pm/elixteg/) and [Telegram Bot API document](https://core.telegram.org/bots/api) for more details.
 
 ## Copyright and License
 
+This library was initially Nadia package developed by Yu Zhang. I wanted to tweak it a little bit and develop it further, adding new changes for Telegram Bot API and so on. So I will add here a link to original Nadia package and keep it. You can check Nadia github page [here](https://github.com/zhyu/nadia)
+
 Copyright (c) 2015 Yu Zhang
+
+Copyright (c) 2023 Qowevisa
 
 This library licensed under the [MIT license](./LICENSE.md).

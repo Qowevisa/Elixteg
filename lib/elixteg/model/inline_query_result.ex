@@ -1,24 +1,24 @@
-defmodule Nadia.Model.InlineQueryResult do
+defmodule Elixteg.Model.InlineQueryResult do
   @type t ::
-          Nadia.Model.InlineQueryResult.Article.t()
-          | Nadia.Model.InlineQueryResult.Photo.t()
-          | Nadia.Model.InlineQueryResult.Gif.t()
-          | Nadia.Model.InlineQueryResult.Mpeg4Gif.t()
-          | Nadia.Model.InlineQueryResult.Video.t()
-          | Nadia.Model.InlineQueryResult.Audio.t()
-          | Nadia.Model.InlineQueryResult.Voice.t()
-          | Nadia.Model.InlineQueryResult.Document.t()
-          | Nadia.Model.InlineQueryResult.Location.t()
-          | Nadia.Model.InlineQueryResult.Venue.t()
-          | Nadia.Model.InlineQueryResult.Contact.t()
-          | Nadia.Model.InlineQueryResult.CachedPhoto
-          | Nadia.Model.InlineQueryResult.CachedGif
-          | Nadia.Model.InlineQueryResult.CachedMpeg4Gif
-          | Nadia.Model.InlineQueryResult.CachedSticker
-          | Nadia.Model.InlineQueryResult.CachedDocument
-          | Nadia.Model.InlineQueryResult.CachedVideo
-          | Nadia.Model.InlineQueryResult.CachedVoice
-          | Nadia.Model.InlineQueryResult.CachedAudio
+          Elixteg.Model.InlineQueryResult.Article.t()
+          | Elixteg.Model.InlineQueryResult.Photo.t()
+          | Elixteg.Model.InlineQueryResult.Gif.t()
+          | Elixteg.Model.InlineQueryResult.Mpeg4Gif.t()
+          | Elixteg.Model.InlineQueryResult.Video.t()
+          | Elixteg.Model.InlineQueryResult.Audio.t()
+          | Elixteg.Model.InlineQueryResult.Voice.t()
+          | Elixteg.Model.InlineQueryResult.Document.t()
+          | Elixteg.Model.InlineQueryResult.Location.t()
+          | Elixteg.Model.InlineQueryResult.Venue.t()
+          | Elixteg.Model.InlineQueryResult.Contact.t()
+          | Elixteg.Model.InlineQueryResult.CachedPhoto
+          | Elixteg.Model.InlineQueryResult.CachedGif
+          | Elixteg.Model.InlineQueryResult.CachedMpeg4Gif
+          | Elixteg.Model.InlineQueryResult.CachedSticker
+          | Elixteg.Model.InlineQueryResult.CachedDocument
+          | Elixteg.Model.InlineQueryResult.CachedVideo
+          | Elixteg.Model.InlineQueryResult.CachedVoice
+          | Elixteg.Model.InlineQueryResult.CachedAudio
 
   defmodule Article do
     defstruct type: "article",

@@ -1,4 +1,4 @@
-defimpl Jason.Encoder, for: Nadia.Model.InlineKeyboardButton do
+defimpl Jason.Encoder, for: Elixteg.Model.InlineKeyboardButton do
   def encode(button, options) do
     Map.from_struct(button)
     |> reject_nil

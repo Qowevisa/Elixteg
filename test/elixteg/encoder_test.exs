@@ -1,7 +1,7 @@
-defmodule Nadia.EncoderTest do
+defmodule Elixteg.EncoderTest do
   use ExUnit.Case, async: true
 
-  alias Nadia.Model.{InlineKeyboardButton}
+  alias Elixteg.Model.{InlineKeyboardButton}
 
   test "inline keyboard button excludes unknown keys as json" do
     json = Jason.encode!(%InlineKeyboardButton{})

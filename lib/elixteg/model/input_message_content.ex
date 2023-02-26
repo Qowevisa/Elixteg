@@ -1,9 +1,9 @@
-defmodule Nadia.Model.InputMessageContent do
+defmodule Elixteg.Model.InputMessageContent do
   @type t ::
-          Nadia.Model.InputMessageContent.Text.t()
-          | Nadia.Model.InputMessageContent.Location.t()
-          | Nadia.Model.InputMessageContent.Venue.t()
-          | Nadia.Model.InputMessageContent.Contact.t()
+          Elixteg.Model.InputMessageContent.Text.t()
+          | Elixteg.Model.InputMessageContent.Location.t()
+          | Elixteg.Model.InputMessageContent.Venue.t()
+          | Elixteg.Model.InputMessageContent.Contact.t()
 
   defmodule Text do
     @derive Jason.Encoder

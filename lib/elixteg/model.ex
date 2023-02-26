@@ -1,4 +1,4 @@
-defmodule Nadia.Model do
+defmodule Elixteg.Model do
   @moduledoc """
   Types used in Telegram Bot API.
 

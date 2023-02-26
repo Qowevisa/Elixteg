@@ -1,5 +1,5 @@
-defmodule Nadia.Behaviour do
-  alias Nadia.Model.{User, Message, Update, UserProfilePhotos, File, Error}
+defmodule Elixteg.Behaviour do
+  alias Elixteg.Model.{User, Message, Update, UserProfilePhotos, File, Error}
 
   @callback get_me :: {:ok, User.t()} | {:error, Error.t()}
   @callback send_message(integer, binary, [{atom, any}]) ::
@@ -44,6 +44,6 @@ defmodule Nadia.Behaviour do
               {:ok, Message.t()} | {:error, Error.t()}
   @callback edit_message_reply_markup(integer | binary, integer, binary, [{atom, any}]) ::
               {:ok, Message.t()} | {:error, Error.t()}
-  @callback answer_inline_query(binary, [Nadia.Model.InlineQueryResult.t()], [{atom, any}]) ::
+  @callback answer_inline_query(binary, [Elixteg.Model.InlineQueryResult.t()], [{atom, any}]) ::
               :ok | {:error, Error.t()}
 end
