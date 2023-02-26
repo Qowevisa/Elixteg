@@ -32,9 +32,9 @@ defmodule Elixteg.Mixfile do
   defp package do
     [
       description: "Telegram Bot API Wrapper written in Elixir",
-      maintainers: ["zhyu"],
+      maintainers: ["Qowevisa"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/zhyu/nadia"}
+      links: %{"GitHub" => "https://github.com/qowevisa/elixteg"}
     ]
   end
 
