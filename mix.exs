@@ -20,7 +20,7 @@ defmodule Elixteg.Mixfile do
 
   defp deps do
     [
-      {:httpoison, "~> 2.0.0"},
+      {:httpoison, "~> 2.1.0"},
       {:jason, "~> 1.4"},
       {:exvcr, "~> 0.13.5", only: [:dev, :test]},
       {:earmark, "~> 1.4", only: :docs},
