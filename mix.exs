@@ -22,7 +22,7 @@ defmodule Elixteg.Mixfile do
     [
       {:httpoison, "~> 2.0.0"},
       {:jason, "~> 1.4"},
-      {:exvcr, "~> 0.13.5", only: [:dev, :test]},
+      {:exvcr, "~> 0.14.1", only: [:dev, :test]},
       {:earmark, "~> 1.4", only: :docs},
       {:ex_doc, ">= 0.0.0", only: :docs, runtime: false},
       {:inch_ex, "~> 2.0.0", only: :docs}
